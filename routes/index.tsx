@@ -19,7 +19,6 @@ type CocktailAPI = {
 export const handler: Handlers = {
   GET: async (req: Request, ctx: FreshContext<unknown, Data>) => {
     const webURL = new URL(req.url);
-    const idDrink = webURL.searchParams.get("idDrink");
     let url = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
     try {
       const response = await Axios.get<CocktailAPI>(url);

@@ -15,6 +15,7 @@ const CocktailsContainer: FunctionalComponent<Props> = (props) => {
     const drinks = props.drinks;
 
     return (
+        
         <div class="drinksContainer">
             <h1>Cocktails</h1>
             <div>
