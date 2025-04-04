@@ -11,7 +11,7 @@ const DrinkCard: FunctionalComponent<Props> = (props) => {
     const {strDrink, strDrinkThumb} = props.cocktail;
 
     return (
-        <div class="drinkCard">
+        <div class="cocktailCard">
             <img src={strDrinkThumb} alt={strDrink}/>
             <h2 class="text-xl font-bold">{strDrink}</h2>
         </div>

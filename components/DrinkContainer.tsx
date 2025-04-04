@@ -13,7 +13,7 @@ type Props = {
 const DrinkContainer: FunctionalComponent<Props> = (props) => {
   const drink = props.drink; // Ajustado para reflejar la propiedad singular
   return (
-    <div>
+    <div class="cocktailCard">
       <img src={drink.strDrinkThumb} alt={drink.strDrink} />
       <h2>{drink.idDrink}</h2>
       <h1>{drink.strDrink}</h1>

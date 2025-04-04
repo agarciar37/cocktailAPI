@@ -15,15 +15,15 @@ const CocktailsContainer: FunctionalComponent<Props> = (props) => {
     const drinks = props.drinks;
 
     return (
-        
-        <div class="drinksContainer">
-            <h1>Cocktails</h1>
-            <div>
-                {drinks.map((drink) => (
-                    <DrinkCard key={drink.idDrink} cocktail={drink} />
-                ))}
-            </div>
+        <>
+        <form method="get" style={{ display: "flex", justifyContent: "center" }}>
+            <input type="text" name="strDrink" placeholder="Introduce un nombre a buscar"/>
+            <button type="submit">Buscar</button>
+        </form>
+        <div class="cocktailContainer">
+            {drinks.map((drink) => (<a href={`/cocktail/${drink.idDrink}`}><DrinkCard key={drink.idDrink} cocktail={drink} /></a>))}
         </div>
+        </>
     );
 }
 
